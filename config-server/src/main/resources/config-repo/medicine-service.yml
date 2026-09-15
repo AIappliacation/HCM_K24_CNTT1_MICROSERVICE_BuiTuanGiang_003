@@ -1,11 +1,11 @@
 server:
-  port: 8081
+  port: 8082
 
 spring:
   application:
-    name: category-service
+    name: medicine-service
   datasource:
-    url: jdbc:h2:mem:category_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:mem:medicine_db;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     driver-class-name: org.h2.Driver
     username: sa
     password: 

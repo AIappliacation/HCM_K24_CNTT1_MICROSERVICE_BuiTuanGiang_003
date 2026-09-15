@@ -1,9 +1,20 @@
+server:
+  port: 8080
+
 spring:
   application:
     name: api-gateway
-
-server:
-  port: 8080
+  cloud:
+    gateway:
+      routes:
+        - id: category-service
+          uri: lb://category-service
+          predicates:
+            - Path=/api/categories/**
+        - id: medicine-service
+          uri: lb://medicine-service
+          predicates:
+            - Path=/api/medicines/**
 
 eureka:
   client:
